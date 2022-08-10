@@ -3,75 +3,75 @@ document.addEventListener('DOMContentLoaded', () => {
 const cardArr=[
     {
         name: 'Mercedes',
-        img: '_Images/mercedes.png'
+        img: './_Images/mercedes.png'
     },
     {
         name: 'Quote',
-        img: '_Images/Quote.jpg'
+        img: './_Images/Quote.jpg'
     },
     {
         name: 'Harry Porter',
-        img: '_Images/Motive.jpg'
+        img: './_Images/Motive.jpg'
     },
     {
         name: 'Battery',
-        img: '_Images/Battery.jpg'
+        img: './_Images/Battery.jpg'
     },
     {
         name: 'Dual',
-        img: '_Images/Dual.jpg'
+        img: './_Images/Dual.jpg'
     },
     {
         name: 'okhi-90-red',
-        img: '_Images/okhi-90-red.jpg'
+        img: './_Images/okhi-90-red.jpg'
     },
     {
         name: 'okinawa',
-        img: '_Images/okinawa.jpg'
+        img: './_Images/okinawa.jpg'
     },
     {
         name: 'praisepro2',
-        img: '_Images/praisepro2.jpg'
+        img: './_Images/praisepro2.jpg'
     },
     {
         name: 'Block',
-        img: '_Images/Block.jpg'
+        img: './_Images/Block.jpg'
     },
     {
         name: 'Mercedes',
-        img: '_Images/mercedes.png'
+        img: './_Images/mercedes.png'
     },
     {
         name: 'Quote',
-        img: '_Images/Quote.jpg'
+        img: './_Images/Quote.jpg'
     },
     {
         name: 'Harry Porter',
-        img: '_Images/Motive.jpg'
+        img: './_Images/Motive.jpg'
     },
     {
         name: 'Battery',
-        img: '_Images/Battery.jpg'
+        img: './_Images/Battery.jpg'
     },
     {
         name: 'Dual',
-        img: '_Images/Dual.jpg'
+        img: './_Images/Dual.jpg'
     },
     {
         name: 'okhi-90-red',
-        img: '_Images/okhi-90-red.jpg'
+        img: './_Images/okhi-90-red.jpg'
     },
     {
         name: 'okinawa',
-        img: '_Images/okinawa.jpg'
+        img: './_Images/okinawa.jpg'
     },
     {
         name: 'praisepro2',
-        img: '_Images/praisepro2.jpg'
+        img: './_Images/praisepro2.jpg'
     },
     {
         name: 'Block',
-        img: '_Images/Block.jpg'
+        img: './_Images/Block.jpg'
     },
    
 ]
@@ -95,20 +95,20 @@ const resultDisplay = document.querySelector('#result')
     const optionTwoId = cardsChosenId[1]
     
     if(optionOneId == optionTwoId) {
-      cards[optionOneId].setAttribute('src','_Images/Blockora.jpg')
-      cards[optionTwoId].setAttribute('src', '_Images/Blockora.jpg')
+      cards[optionOneId].setAttribute('src','./_Images/Blockora.jpg')
+      cards[optionTwoId].setAttribute('src', './_Images/Blockora.jpg')
       alert('You have clicked the same image!')
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
-      cards[optionOneId].setAttribute('src', '_Images/white.png')
-      cards[optionTwoId].setAttribute('src', '_Images/white.png')
+      cards[optionOneId].setAttribute('src', './_Images/white.png')
+      cards[optionTwoId].setAttribute('src', './_Images/white.png')
       cards[optionOneId].removeEventListener('click', flipCard)
       cards[optionTwoId].removeEventListener('click', flipCard)
       cardsWon.push(cardsChosen)
     } else {
-      cards[optionOneId].setAttribute('src', '_Images/Blockora.jpg')
-      cards[optionTwoId].setAttribute('src',' _Images/Blockora.jpg')
+      cards[optionOneId].setAttribute('src', './_Images/Blockora.jpg')
+      cards[optionTwoId].setAttribute('src',' ./_Images/Blockora.jpg')
     //  alert('Sorry, try again')
     }
     cardsChosen = []
@@ -132,7 +132,7 @@ const resultDisplay = document.querySelector('#result')
   function createBoard() {
     for (let i = 0; i < cardArr.length; i++) {
       const card = document.createElement('img')
-      card.setAttribute('src',' _Images/Blockora.jpg')
+      card.setAttribute('src',' ./_Images/Blockora.jpg')
       card.setAttribute('data-id', i)
       card.addEventListener('click', flipCard)
       gridd.appendChild(card)

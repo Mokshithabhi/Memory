@@ -3,80 +3,79 @@ document.addEventListener('DOMContentLoaded', () => {
 const cardArr=[
     {
         name: 'Mercedes',
-        img: './_Images/mercedes.png'
+        img: './Images/mercedes.png'
     },
     {
         name: 'Quote',
-        img: './_Images/Quote.jpg'
+        img: './Images/Quote.jpg'
     },
     {
         name: 'Harry Porter',
-        img: './_Images/Motive.jpg'
+        img: './Images/Motive.jpg'
     },
     {
         name: 'Battery',
-        img: './_Images/Battery.jpg'
+        img: './Images/Battery.jpg'
     },
     {
         name: 'Dual',
-        img: './_Images/Dual.jpg'
+        img: './Images/Dual.jpg'
     },
     {
         name: 'okhi-90-red',
-        img: './_Images/okhi-90-red.jpg'
+        img: './Images/okhi-90-red.jpg'
     },
     {
         name: 'okinawa',
-        img: './_Images/okinawa.jpg'
+        img: './Images/okinawa.jpg'
     },
     {
         name: 'praisepro2',
-        img: './_Images/praisepro2.jpg'
+        img: './Images/praisepro2.jpg'
     },
     {
         name: 'Block',
-        img: './_Images/Block.jpg'
+        img: './Images/Block.jpg'
     },
     {
         name: 'Mercedes',
-        img: './_Images/mercedes.png'
+        img: './Images/mercedes.png'
     },
     {
         name: 'Quote',
-        img: './_Images/Quote.jpg'
+        img: './Images/Quote.jpg'
     },
     {
         name: 'Harry Porter',
-        img: './_Images/Motive.jpg'
+        img: './Images/Motive.jpg'
     },
     {
         name: 'Battery',
-        img: './_Images/Battery.jpg'
+        img: './Images/Battery.jpg'
     },
     {
         name: 'Dual',
-        img: './_Images/Dual.jpg'
+        img: './Images/Dual.jpg'
     },
     {
         name: 'okhi-90-red',
-        img: './_Images/okhi-90-red.jpg'
+        img: './Images/okhi-90-red.jpg'
     },
     {
         name: 'okinawa',
-        img: './_Images/okinawa.jpg'
+        img: './Images/okinawa.jpg'
     },
     {
         name: 'praisepro2',
-        img: './_Images/praisepro2.jpg'
+        img: './Images/praisepro2.jpg'
     },
     {
         name: 'Block',
-        img: './_Images/Block.jpg'
+        img: './Images/Block.jpg'
     },
    
 ]
 
-// to sort randomly we use 0.5-Math.random() because it is comparing with 0.5
 cardArr.sort(()=>0.5 - Math.random())
 
 const gridd=document.querySelector('#grid')
@@ -85,30 +84,26 @@ const resultDisplay = document.querySelector('#result')
   let cardsChosenId = []
   let cardsWon = []
 
-  //create your board
-  
-
-  //check for matches
   function checkForMatch() {
     const cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenId[0]
     const optionTwoId = cardsChosenId[1]
     
     if(optionOneId == optionTwoId) {
-      cards[optionOneId].setAttribute('src','./_Images/Blockora.jpg')
-      cards[optionTwoId].setAttribute('src', './_Images/Blockora.jpg')
+      cards[optionOneId].setAttribute('src','./Images/Blockora.jpg')
+      cards[optionTwoId].setAttribute('src', './Images/Blockora.jpg')
       alert('You have clicked the same image!')
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
-      cards[optionOneId].setAttribute('src', './_Images/white.png')
-      cards[optionTwoId].setAttribute('src', './_Images/white.png')
+      cards[optionOneId].setAttribute('src', './Images/white.png')
+      cards[optionTwoId].setAttribute('src', './Images/white.png')
       cards[optionOneId].removeEventListener('click', flipCard)
       cards[optionTwoId].removeEventListener('click', flipCard)
       cardsWon.push(cardsChosen)
     } else {
-      cards[optionOneId].setAttribute('src', './_Images/Blockora.jpg')
-      cards[optionTwoId].setAttribute('src',' ./_Images/Blockora.jpg')
+      cards[optionOneId].setAttribute('src', './Images/Blockora.jpg')
+      cards[optionTwoId].setAttribute('src',' ./Images/Blockora.jpg')
     //  alert('Sorry, try again')
     }
     cardsChosen = []
@@ -119,7 +114,7 @@ const resultDisplay = document.querySelector('#result')
     }
   }
 
-  //flip your card
+
   function flipCard() {
     let cardId = this.getAttribute('data-id')
     cardsChosen.push(cardArr[cardId].name)
@@ -132,7 +127,7 @@ const resultDisplay = document.querySelector('#result')
   function createBoard() {
     for (let i = 0; i < cardArr.length; i++) {
       const card = document.createElement('img')
-      card.setAttribute('src',' ./_Images/Blockora.jpg')
+      card.setAttribute('src',' ./Images/Blockora.jpg')
       card.setAttribute('data-id', i)
       card.addEventListener('click', flipCard)
       gridd.appendChild(card)
@@ -149,7 +144,7 @@ const resultDisplay = document.querySelector('#result')
 //     // for each item in my array i can create an item so for that i can use for loop
 //    for(let i=0;i<cardArr.length;i++){
 //      const card =document.createElement('img')
-//      card.setAttribute ('src', '_Images/Blockora.jpg')
+//      card.setAttribute ('src', 'Images/Blockora.jpg')
 //      // each card should have unique id so
 //      card.setAttribute('data-id',i)
 //      card.addEventListener('click',flipCard)

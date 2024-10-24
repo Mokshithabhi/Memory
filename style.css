@@ -1,14 +1,24 @@
-img{
-    width :150px;
-    height: 150px 
-  } 
+img {
+  width: 100px;
+  height: 100px;
+  box-shadow: 2px 5px 10px rgba(5, 19, 89, 0.815);
+}
+
+p{
+  font-size: 20px;
+  margin:auto;
+}
+
+#result {
+  margin:auto;
+  font-size: 20px;
+}
 
 #grid {
-
-    width: 400px;
-    height: 300px;
-     flex-direction:column;  
-    flex-wrap: wrap;
-    display: flex; 
-  
-  }
+  display: flex;
+  width: 480px;
+  gap: 10px;
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;
+}

@@ -26,10 +26,6 @@ const cardArr=[
         img: './Images/okhi-90-red.jpg'
     },
     {
-        name: 'okinawa',
-        img: './Images/okinawa.jpg'
-    },
-    {
         name: 'praisepro2',
         img: './Images/praisepro2.jpg'
     },
@@ -62,10 +58,6 @@ const cardArr=[
         img: './Images/okhi-90-red.jpg'
     },
     {
-        name: 'okinawa',
-        img: './Images/okinawa.jpg'
-    },
-    {
         name: 'praisepro2',
         img: './Images/praisepro2.jpg'
     },
@@ -79,6 +71,7 @@ const cardArr=[
 cardArr.sort(()=>0.5 - Math.random())
 
 const gridd=document.querySelector('#grid')
+
 const resultDisplay = document.querySelector('#result')
   let cardsChosen = []
   let cardsChosenId = []
@@ -95,7 +88,7 @@ const resultDisplay = document.querySelector('#result')
       alert('You have clicked the same image!')
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
-      alert('You found a match')
+      // alert('You found a match')
       cards[optionOneId].setAttribute('src', './Images/white.png')
       cards[optionTwoId].setAttribute('src', './Images/white.png')
       cards[optionOneId].removeEventListener('click', flipCard)
